@@ -6,8 +6,8 @@
 
 class CardGame
 
-
-  def checkforAce(card)
+  # Should be a class method as there is no initialize()
+  def checkforAce(card) # Function names should be snakecase
     if card.value = 1 # Should be "== 1"
       return true
     else
@@ -15,6 +15,7 @@ class CardGame
     end
   end
 
+# Should be a class method as there is no initialize()
   dif highest_card(card1 card2) # Should be "def" and should be "(card1, card2)"
   if card1.value > card2.value
     return card # Should be "card1" unless card2 is an ace
