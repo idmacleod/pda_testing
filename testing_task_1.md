@@ -1,7 +1,9 @@
-### Testing task 1:
+# Testing task 1:
 
-# Carry out static testing on the code below.
-# Comment on any errors that you see below.
+Carry out static testing on the code below.
+
+Comment on any errors that you see below.
+
 ```ruby
 
 class CardGame
