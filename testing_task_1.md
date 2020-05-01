@@ -17,9 +17,9 @@ class CardGame
 
   dif highest_card(card1 card2) # Should be "def" and should be "(card1, card2)"
   if card1.value > card2.value
-    return card # Should be "card1"
+    return card # Should be "card1" unless card2 is an ace
   else
-    return card2 # What if the cards have equal value?
+    return card2 # What if the cards have equal value?  Also need to check for aces!
   end
 end
 end # Should not be here - one end too many!
