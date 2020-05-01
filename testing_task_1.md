@@ -8,7 +8,7 @@ class CardGame
 
   # Should be a class method as there is no initialize()
   def checkforAce(card) # Function names should be snakecase
-    if card.value = 1 # Should be "== 1"
+    if card.value = 1 # Should be "== 14"
       return true
     else
       return false
