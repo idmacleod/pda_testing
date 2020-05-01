@@ -3,14 +3,10 @@
 # Carry out dynamic testing on the code below.
 # Correct the errors below that you spotted in task 1.
 
-class CardGame
+class CardGame # Refactored!
 
   def self.check_for_ace(card)
-    if card.value == 14
-      return true
-    else
-      return false
-    end
+    return card.value == 14 # Assuming aces high
   end
 
   def self.highest_card(card1, card2)
@@ -19,10 +15,7 @@ class CardGame
   end
 
   def self.cards_total(cards)
-    total = 0
-    for card in cards
-      total += card.value
-    end
+    total = cards.sum {|card| card.value}
     return "You have a total of #{total}"
   end
 

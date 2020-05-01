@@ -20,7 +20,7 @@ class CardGame
   if card1.value > card2.value
     return card # Should be "card1"
   else
-    return card2 # What if the cards have equal value?
+    return card2 # What if the cards have equal value?  Return nil?
   end
 end
 end # Should not be here - one end too many!
