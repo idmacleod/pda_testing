@@ -12,32 +12,37 @@ class CardTest < MiniTest::Test
         @card2 = Card.new("clubs", 5)
         @card3 = Card.new("spades", 5)
         @card4 = Card.new("diamonds", 10)
-
+        @cards = [@card1, @card2, @card3, @card4]
     end
 
     def test_check_for_ace__true()
-        assert(checkforAce(@card1))
+        assert(CardGame.check_for_ace(@card1))
     end
 
     def test_check_for_ace__false()
-        refute(checkforAce(@card2))
+        refute(CardGame.check_for_ace(@card2))
     end
 
     def test_highest_card__arg1()
-        assert_equal(@card4, highest_card(@card4, @card2))
+        assert_equal(@card4, CardGame.highest_card(@card4, @card2))
     end
 
     def test_highest_card__arg2()
-        assert_equal(@card4, highest_card(@card3, @card4))
+        assert_equal(@card4, CardGame.highest_card(@card3, @card4))
     end
 
     def test_highest_card__ace()
-        assert_equal(@card1, highest_card(@card1, @card2))
+        assert_equal(@card1, CardGame.highest_card(@card1, @card2))
     end
 
     def test_highest_card__equal()
         # Assume returns nil
-        assert_nil(@card1, highest_card(@card2, @card3))
+        assert_nil(CardGame.highest_card(@card2, @card3))
     end
-    
+
+    def test_cards_total()
+        assert_equal("You have a total of 34", CardGame.cards_total(@cards))
+    end
+
 end
+

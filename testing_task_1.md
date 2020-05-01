@@ -8,7 +8,7 @@ class CardGame
 
   # Should be a class method as there is no initialize()
   def checkforAce(card) # Function names should be snakecase
-    if card.value = 1 # Should be "== 14"
+    if card.value = 1 # Should be "== 14", assuming aces high
       return true
     else
       return false
@@ -35,4 +35,6 @@ def self.cards_total(cards)
     ### return "You have a total of #{total}"
   end
 end
+
+# No end for the class!
 ```
